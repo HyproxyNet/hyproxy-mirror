@@ -1,0 +1,30 @@
+global:
+  base_dir: data
+  interval: 1h
+  log_level: info # 支持: debug, info, warn, error
+
+repositories:
+  - owner: SagerNet
+    repo: sing-box
+    path: sing-box
+  - owner: mihomo-party-org
+    repo: mihomo-party
+    path: mihomo-party
+  - owner: hiddify
+    repo: hiddify-app
+    path: hiddify-app
+  - owner: MetaCubeX
+    repo: ClashMetaForAndroid
+    path: ClashMetaForAndroid
+  - owner: 2dust
+    repo: v2rayN
+    path: v2rayN
+  - owner: 2dust
+    repo: v2rayNG
+    path: v2rayNG
+  - owner: getsurfboard
+    repo: surfboard
+    path: surfboard
+  - owner: clash-verge-rev
+    repo: clash-verge-rev
+    path: clash-verge-rev
