@@ -4,506 +4,193 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hyproxy 下载镜像站</title>
-    
-    <!-- 外部样式表 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-    
-    <style>
-        /* ========== CSS 变量定义 ========== */
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-        }
-
-        /* ========== 基础样式 ========== */
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            background-image: 
-                linear-gradient(to bottom right, rgba(52, 152, 219, 0.1), rgba(44, 62, 80, 0.1)),
-                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233498db' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            transition: all 0.3s ease;
-        }
-
-        /* ========== 页面布局 ========== */
-        .page-container {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .content-wrap {
-            flex: 1 0 auto;
-        }
-
-        /* ========== 头部样式 ========== */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            border-radius: 0 0 1rem 1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .header h1 {
-            color: white;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .header p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.2rem;
-        }
-
-        .header a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .header a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            text-decoration: none;
-            color: #fff;
-        }
-
-        /* ========== 卡片样式 ========== */
-        .card {
-            border: none;
-            border-radius: 1rem;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            margin-bottom: 1rem;
-            height: auto;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-header {
-            border-radius: 0 !important;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            background: var(--primary-color);
-            cursor: pointer;
-        }
-
-        .card-header:hover {
-            background: #2980b9;
-        }
-
-        .repo-title {
-            color: white;
-            font-weight: 600;
-            margin: 0;
-            font-size: 1rem;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            max-width: 70%;
-        }
-
-        .tag-badge {
-            background-color: rgba(255, 255, 255, 0.25);
-            color: white;
-            border-radius: 2rem;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-
-        /* ========== 列表项样式 ========== */
-        .list-group-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1rem;
-            transition: background-color 0.2s ease;
-        }
-
-        .list-group-item:hover {
-            background-color: rgba(52, 152, 219, 0.05);
-        }
-
-        .asset-link {
-            display: flex;
-            align-items: center;
-            color: var(--secondary-color);
-            text-decoration: none;
-            width: calc(100% - 40px);
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .asset-link:hover {
-            color: var(--primary-color);
-        }
-
-        .asset-link i {
-            margin-right: 0.5rem;
-            color: var(--primary-color);
-            flex-shrink: 0;
-        }
-
-        .asset-name {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        /* 下载失败状态样式 */
-        .asset-link.text-muted {
-            color: #6c757d !important;
-            cursor: default;
-        }
-
-        .asset-link.text-muted:hover {
-            color: #6c757d !important;
-        }
-
-        .asset-link.text-muted i {
-            color: #6c757d !important;
-        }
-
-        /* ========== 下载按钮样式 ========== */
-        .download-btn {
-            border: none;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.2s ease;
-            flex-shrink: 0;
-            margin-left: 8px;
-        }
-
-        .download-btn:hover {
-            background-color: var(--accent-color);
-            transform: scale(1.1);
-        }
-
-        /* ========== 深色模式切换按钮 ========== */
-        .dark-mode-toggle {
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--secondary-color);
-            color: white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .dark-mode-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        /* ========== 页脚样式 ========== */
-        footer {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white !important;
-            border-radius: 1rem 1rem 0 0;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
-            width: 100%;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        footer a:hover {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: underline;
-        }
-
-        /* ========== 深色模式样式 ========== */
-        body.dark-mode {
-            --primary-color: #3498db;
-            --secondary-color: #1a1a2e;
-            --accent-color: #e94560;
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            color: #e0e0e0;
-            background-image: 
-                linear-gradient(to bottom right, rgba(52, 152, 219, 0.05), rgba(26, 26, 46, 0.05)),
-                url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233498db' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        body.dark-mode .card {
-            background-color: var(--card-bg);
-        }
-
-        body.dark-mode .list-group-item {
-            background-color: var(--card-bg);
-            color: #e0e0e0;
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        body.dark-mode .asset-link {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .asset-link.text-muted {
-            color: #6c757d !important;
-        }
-
-        body.dark-mode .asset-link.text-muted i {
-            color: #6c757d !important;
-        }
-
-        body.dark-mode footer {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        }
-
-        body.dark-mode footer p {
-            color: #ffffff !important;
-        }
-
-        /* ========== 折叠动画样式 ========== */
-        .collapsible-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .collapsible-content.open {
-            max-height: none;
-            transition: max-height 0.5s ease-in;
-        }
-
-        .chevron-icon {
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        .rotate-icon {
-            transform: rotate(180deg);
-        }
-
-        .list-group {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        /* ========== 滚动条样式 ========== */
-        .list-group::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .list-group::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 3px;
-        }
-
-        .list-group::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 3px;
-        }
-
-        body.dark-mode .list-group::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        /* ========== 响应式设计 ========== */
-        @media (max-width: 768px) {
-            .header {
-                padding: 1.5rem 0;
-            }
-
-            .repo-title {
-                max-width: 60%;
-            }
-        }
-    </style>
+    <link href="/static/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- 深色模式切换按钮 -->
-    <div class="dark-mode-toggle" id="darkModeToggle">
+    <!-- Dark mode toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="切换深色模式">
         <i class="fas fa-moon"></i>
-    </div>
+    </button>
 
     <div class="page-container">
         <div class="content-wrap">
-            <!-- 页面头部 -->
-            <div class="header animate__animated animate__fadeIn">
+
+            <!-- ===== Header ===== -->
+            <header class="site-header">
                 <div class="container">
-                    <h1 class="text-center">
-                        <i class="fab fa-github me-2"></i>
-                        Hyproxy下载镜像站
-                    </h1>
-                    <p class="text-center mb-0">
-                        如有您希望添加的仓库 请联系
-                        <a href="https://t.me/Hyproxy">@Hyproxy</a>
+                    <h1><i class="fab fa-github me-2"></i>Hyproxy 下载镜像站</h1>
+                    <p>如有您希望添加的仓库，请联系
+                        <a href="https://t.me/Hyproxy" target="_blank" rel="noopener">@Hyproxy</a>
                     </p>
+                </div>
+            </header>
+
+            <!-- ===== Filter Bar (sticky) ===== -->
+            <div class="filter-bar" id="filterBar">
+                <div class="container">
+
+                    <!-- Quick presets -->
+                    <div class="presets" id="presets">
+                        <span class="preset-label">快速选择：</span>
+                        <button class="preset-btn" data-os="android" data-arch="arm64">
+                            <i class="fab fa-android"></i> Android ARM64
+                        </button>
+                        <button class="preset-btn" data-os="windows" data-arch="x64">
+                            <i class="fab fa-windows"></i> Windows x64
+                        </button>
+                        <button class="preset-btn" data-os="macos" data-arch="arm64">
+                            <i class="fab fa-apple"></i> macOS Apple芯片
+                        </button>
+                        <button class="preset-btn" data-os="macos" data-arch="x64">
+                            <i class="fab fa-apple"></i> macOS Intel
+                        </button>
+                        <button class="preset-btn" data-os="linux" data-arch="x64">
+                            <i class="fab fa-linux"></i> Linux x64
+                        </button>
+                        <button class="preset-btn" data-os="linux" data-arch="arm64">
+                            <i class="fab fa-linux"></i> Linux ARM64
+                        </button>
+                    </div>
+
+                    <!-- Fine-grained filters -->
+                    <div class="filter-controls">
+                        <div class="filter-group">
+                            <label class="filter-label" for="filterSoftware">
+                                <i class="fas fa-cube"></i> 软件
+                            </label>
+                            <select id="filterSoftware" class="filter-select">
+                                <option value="">全部</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-label" for="filterOS">
+                                <i class="fas fa-display"></i> 系统
+                            </label>
+                            <select id="filterOS" class="filter-select">
+                                <option value="">全部系统</option>
+                                <option value="windows">Windows</option>
+                                <option value="android">Android</option>
+                                <option value="macos">macOS</option>
+                                <option value="linux">Linux</option>
+                                <option value="openwrt">OpenWrt</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-label" for="filterArch">
+                                <i class="fas fa-microchip"></i> 架构
+                            </label>
+                            <select id="filterArch" class="filter-select">
+                                <option value="">全部架构</option>
+                                <option value="universal">Universal 通用</option>
+                                <option value="x64">x64 (amd64 / Intel 64位)</option>
+                                <option value="arm64">ARM64 (aarch64)</option>
+                                <option value="armv7">ARMv7 (armeabi / armhf)</option>
+                                <option value="x86">x86 (ia32 / 32位)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-check-label" for="showMeta">
+                                <input type="checkbox" id="showMeta" />
+                                <span>显示校验文件</span>
+                            </label>
+                        </div>
+
+                        <button id="resetFilter" class="btn-reset">
+                            <i class="fas fa-rotate-left"></i> 重置
+                        </button>
+                    </div>
+
+                    <!-- Result stats -->
+                    <div class="filter-stats" id="filterStats"></div>
                 </div>
             </div>
 
-            <!-- 主要内容区域 -->
-            <div class="container py-2">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="repoContainer">
-                    <!-- 仓库卡片模板 -->
+            <!-- ===== Repo Cards ===== -->
+            <main class="container py-3">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="repoContainer">
                     {{range .}}
-                    <div class="col">
+                    <div class="col repo-card-wrapper" data-repo="{{.RepoName}}">
                         <div class="card">
-                            <div class="card-header collapsible-header">
-                                <h5 class="repo-title" title="{{.RepoName}}">
-                                    {{.RepoName}}
-                                </h5>
-                                <div class="d-flex align-items-center">
-                                    <span class="tag-badge me-2">{{.TagName}}</span>
-                                    <i class="fas fa-chevron-down chevron-icon"></i>
+                            <div class="card-header collapsible-header" role="button" aria-expanded="false">
+                                <div class="card-header-content">
+                                    <h5 class="repo-title" title="{{.RepoName}}">{{.RepoName}}</h5>
+                                    <div class="card-header-right">
+                                        {{if .TagName}}
+                                        <span class="tag-badge">{{.TagName}}</span>
+                                        {{else}}
+                                        <span class="tag-badge syncing">同步中…</span>
+                                        {{end}}
+                                        <i class="fas fa-chevron-down chevron-icon"></i>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="collapsible-content">
-                                <ul class="list-group list-group-flush">
+                                {{if .Assets}}
+                                <ul class="list-group list-group-flush asset-list">
+                                    {{$repo := .RepoName}}
                                     {{range .Assets}}
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <li class="list-group-item asset-item"
+                                        data-name="{{.AssetName}}"
+                                        data-repo="{{$repo}}">
                                         {{if .Completed}}
-                                        <!-- 下载成功，正常渲染链接 -->
-                                        <a href="{{.LocalPath}}" class="asset-link" download title="{{.AssetName}}">
-                                            <i class="fas fa-file-download"></i>
+                                        <a href="{{.LocalPath}}" class="asset-link" download>
+                                            <i class="asset-icon fas fa-file-arrow-down"></i>
                                             <span class="asset-name">{{.AssetName}}</span>
                                         </a>
                                         <a href="{{.LocalPath}}" class="download-btn" download title="下载 {{.AssetName}}">
                                             <i class="fas fa-download"></i>
                                         </a>
                                         {{else}}
-                                        <!-- 下载失败，渲染为灰色不可点击状态 -->
-                                        <span class="asset-link text-muted" title="{{.AssetName}} (下载失败)">
-                                            <i class="fas fa-file-alt"></i>
-                                            <span class="asset-name">{{.AssetName}} (下载失败)</span>
+                                        <span class="asset-link failed">
+                                            <i class="asset-icon fas fa-circle-exclamation"></i>
+                                            <span class="asset-name">{{.AssetName}}</span>
                                         </span>
+                                        <span class="failed-badge">失败</span>
                                         {{end}}
                                     </li>
                                     {{end}}
                                 </ul>
+                                {{else}}
+                                <div class="no-assets">
+                                    <i class="fas fa-clock-rotate-left"></i>
+                                    <span>等待同步…</span>
+                                </div>
+                                {{end}}
                             </div>
                         </div>
                     </div>
                     {{end}}
                 </div>
-            </div>
-        </div>
 
-        <!-- 页面底部 -->
-        <footer class="py-4 mt-4">
+                <!-- No results message -->
+                <div class="no-results" id="noResults">
+                    <i class="fas fa-filter-circle-xmark fa-3x mb-3 d-block"></i>
+                    <p>没有找到匹配的文件</p>
+                    <button class="btn-reset"
+                            onclick="document.getElementById('resetFilter').click()">
+                        <i class="fas fa-rotate-left"></i> 重置筛选
+                    </button>
+                </div>
+            </main>
+
+        </div><!-- /content-wrap -->
+
+        <!-- ===== Footer ===== -->
+        <footer class="site-footer">
             <div class="container text-center">
-                <p class="text-white mb-0">
-                    © <a href="https://www.hyproxy.org" target="_blank">辉夜Proxy下载站</a>
-                </p>
+                <p>© <a href="https://www.hyproxy.org" target="_blank" rel="noopener">辉夜Proxy下载站</a></p>
             </div>
         </footer>
-    </div>
+    </div><!-- /page-container -->
 
-    <!-- JavaScript 脚本 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // ========== 深色模式切换功能 ==========
-        const darkModeToggle = document.getElementById("darkModeToggle");
-        const body = document.body;
-        const icon = darkModeToggle.querySelector("i");
-
-        // 检查本地存储的主题偏好
-        if (localStorage.getItem("darkMode") === "enabled") {
-            body.classList.add("dark-mode");
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
-        }
-
-        // 深色模式切换事件监听
-        darkModeToggle.addEventListener("click", () => {
-            body.classList.toggle("dark-mode");
-
-            if (body.classList.contains("dark-mode")) {
-                localStorage.setItem("darkMode", "enabled");
-                icon.classList.remove("fa-moon");
-                icon.classList.add("fa-sun");
-            } else {
-                localStorage.setItem("darkMode", null);
-                icon.classList.remove("fa-sun");
-                icon.classList.add("fa-moon");
-            }
-        });
-
-        // ========== 卡片折叠功能 ==========
-        document.addEventListener("DOMContentLoaded", () => {
-            const collapsibleHeaders = document.querySelectorAll(".collapsible-header");
-
-            collapsibleHeaders.forEach((header) => {
-                header.addEventListener("click", () => {
-                    const content = header.nextElementSibling;
-                    const chevron = header.querySelector(".chevron-icon");
-
-                    // 切换内容显示状态
-                    content.classList.toggle("open");
-
-                    // 旋转箭头图标
-                    chevron.classList.toggle("rotate-icon");
-
-                    // 为了更好的用户体验，可以只保持一个项目展开
-                    if (content.classList.contains("open")) {
-                        const allContents = document.querySelectorAll(".collapsible-content");
-                        const allChevrons = document.querySelectorAll(".chevron-icon");
-
-                        allContents.forEach((item) => {
-                            if (item !== content) {
-                                item.classList.remove("open");
-                            }
-                        });
-
-                        allChevrons.forEach((item) => {
-                            if (item !== chevron) {
-                                item.classList.remove("rotate-icon");
-                            }
-                        });
-                    }
-                });
-            });
-
-            // 初始化 - 所有内容默认收起
-            const allContents = document.querySelectorAll(".collapsible-content");
-            allContents.forEach((content) => {
-                content.classList.remove("open");
-            });
-        });
-    </script>
+    <script src="/static/js/app.js"></script>
 </body>
 </html>

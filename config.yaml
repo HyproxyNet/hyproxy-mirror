@@ -8,8 +8,8 @@ repositories:
     repo: sing-box
     path: sing-box
   - owner: mihomo-party-org
-    repo: mihomo-party
-    path: mihomo-party
+    repo: clash-party
+    path: clash-party
   - owner: hiddify
     repo: hiddify-app
     path: hiddify-app
@@ -28,3 +28,6 @@ repositories:
   - owner: clash-verge-rev
     repo: clash-verge-rev
     path: clash-verge-rev
+  - owner: chen08209
+    repo: FlClash
+    path: FlClash

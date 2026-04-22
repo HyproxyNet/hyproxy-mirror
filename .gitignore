@@ -1,0 +1,23 @@
+# Build output
+hyproxy-mirror
+hyproxy-mirror.exe
+
+# Downloaded release assets
+data/
+
+# Sync state
+state.json
+state.json.tmp
+
+# Config overrides (keep config.yaml as template)
+config.local.yaml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

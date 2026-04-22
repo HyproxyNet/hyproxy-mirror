@@ -110,7 +110,10 @@ func main() {
 		}
 	}()
 
-	// 静态文件与 API
+	// 静态资源（CSS / JS）
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+
+	// 已下载的 Release 文件
 	http.Handle("/files/", http.StripPrefix("/files/", http.FileServer(http.Dir(filepath.Clean(base)))))
 	http.HandleFunc("/api/repos", api.Handler)
 
