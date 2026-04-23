@@ -1,0 +1,1656 @@
+[
+  {
+    "RepoName": "SagerNet/sing-box",
+    "TagName": "v1.13.11",
+    "Assets": [
+      {
+        "AssetName": "SFA-1.13.11-x86_64.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-x86_64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a8_vfpv3.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a8_vfpv3.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-universal.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-universal.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_i386_pentium4.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_i386_pentium4.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_armv7hl.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_armv7hl.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-loong64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-loong64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mips64le-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mips64le-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_riscv64_generic.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_riscv64_generic.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-armv6.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-armv6.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_74kc.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_74kc.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-riscv64-musl.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-riscv64-musl.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips_24kc.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips_24kc.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-windows-amd64-legacy-windows-7.zip",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-windows-amd64-legacy-windows-7.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_riscv64.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_riscv64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips64el_mips64r2.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips64el_mips64r2.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFM-1.13.11-Intel.pkg",
+        "LocalPath": "/files/sing-box/SFM-1.13.11-Intel.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_amd64.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_amd64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_24kc_24kf.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_24kc_24kf.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-armv7.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-armv7.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_74kc.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_74kc.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mipsle-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mipsle-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips64_octeonplus.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips64_octeonplus.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-386-softfloat.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-386-softfloat.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a5_vfpv4.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a5_vfpv4.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-android-386.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-android-386.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_loongarch64.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_loongarch64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_ppc64le.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_ppc64le.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mips64le.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mips64le.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a7.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a7.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mips-softfloat.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mips-softfloat.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_cortex-a53.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_cortex-a53.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a8_vfpv3.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a8_vfpv3.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-armv7-musl.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-armv7-musl.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_i386.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_i386.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mipsle.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mipsle.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_fa526.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_fa526.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_x86.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_x86.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_cortex-a76.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_cortex-a76.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-386-musl.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-386-musl.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-riscv64-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-riscv64-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_24kc.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_24kc.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-legacy-android-5-armeabi-v7a.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-legacy-android-5-armeabi-v7a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-legacy-android-5-arm64-v8a.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-legacy-android-5-arm64-v8a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a15_neon-vfpv4.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a15_neon-vfpv4.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_mips64el.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_mips64el.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_mipsel.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_mipsel.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_x86_64.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_x86_64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFM-1.13.11-Apple.pkg",
+        "LocalPath": "/files/sing-box/SFM-1.13.11-Apple.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a15_neon-vfpv4.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a15_neon-vfpv4.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a7_neon-vfpv4.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a7_neon-vfpv4.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a5_vfpv4.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a5_vfpv4.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips64_mips64r2.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips64_mips64r2.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_xscale.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_xscale.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_arm926ej-s.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_arm926ej-s.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_x86_64.pkg.tar.zst",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_x86_64.pkg.tar.zst",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips_mips32.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips_mips32.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_arm926ej-s.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_arm926ej-s.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-darwin-amd64-legacy-macos-10.13.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-darwin-amd64-legacy-macos-10.13.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-windows-386-legacy-windows-7.zip",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-windows-386-legacy-windows-7.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mips64le-softfloat.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mips64le-softfloat.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_aarch64.pkg.tar.zst",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_aarch64.pkg.tar.zst",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips_24kc.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips_24kc.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_i386.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_i386.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips_mips32.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips_mips32.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-armv5.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-armv5.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_mips64el.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_mips64el.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_s390x.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_s390x.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_fa526.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_fa526.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips64_mips64r2.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips64_mips64r2.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips64_octeonplus.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips64_octeonplus.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_armhf.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_armhf.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_24kc_24kf.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_24kc_24kf.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-arm64-musl.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-arm64-musl.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mipsle-softfloat-musl.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mipsle-softfloat-musl.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-darwin-arm64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-darwin-arm64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_x86_64.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_x86_64.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_cortex-a76.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_cortex-a76.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_loongarch64_generic.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_loongarch64_generic.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_armel.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_armel.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-arm64-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-arm64-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_cortex-a53.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_cortex-a53.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_mips32.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_mips32.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-amd64-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-amd64-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_ppc64el.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_ppc64el.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-arm64-v8a.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-arm64-v8a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_i386_pentium-mmx.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_i386_pentium-mmx.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mipsle-softfloat.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mipsle-softfloat.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_loongarch64.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_loongarch64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFM-1.13.11-Universal.pkg",
+        "LocalPath": "/files/sing-box/SFM-1.13.11-Universal.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-x86.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-x86.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-legacy-android-5-x86.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-legacy-android-5-x86.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-android-amd64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-android-amd64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-android-arm.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-android-arm.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_loongarch64.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_loongarch64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_s390x.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_s390x.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_armv6hl.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_armv6hl.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_cortex-a72.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_cortex-a72.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-mips64-softfloat.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-mips64-softfloat.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_armv7hl.pkg.tar.zst",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_armv7hl.pkg.tar.zst",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a9.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a9.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a7_neon-vfpv4.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a7_neon-vfpv4.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_arm64.deb",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_arm64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-android-arm64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-android-arm64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a7_vfpv4.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a7_vfpv4.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-version-metadata.json",
+        "LocalPath": "/files/sing-box/SFA-version-metadata.json",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-386-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-386-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_x86_64.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_x86_64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_generic.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_generic.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-legacy-android-5-universal.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-legacy-android-5-universal.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a9_neon.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a9_neon.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_riscv64_generic.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_riscv64_generic.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips_4kec.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips_4kec.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-windows-amd64.zip",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-windows-amd64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-s390x.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-s390x.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_loongarch64_generic.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_loongarch64_generic.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-loong64-musl.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-loong64-musl.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_aarch64.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_aarch64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_arm1176jzf-s_vfp.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_arm1176jzf-s_vfp.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-legacy-android-5-x86_64.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-legacy-android-5-x86_64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_i386_pentium4.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_i386_pentium4.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_mips32.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_mips32.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_riscv64.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_riscv64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFA-1.13.11-armeabi-v7a.apk",
+        "LocalPath": "/files/sing-box/SFA-1.13.11-armeabi-v7a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-amd64-musl.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-amd64-musl.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_riscv64.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_riscv64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-riscv64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-riscv64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mipsel_24kc.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mipsel_24kc.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a7_vfpv4.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a7_vfpv4.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_armv7.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_armv7.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_generic.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_generic.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a9_vfpv3-d16.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a9_vfpv3-d16.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-armv7-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-armv7-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_aarch64.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_aarch64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a9_vfpv3-d16.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a9_vfpv3-d16.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_x86_64.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_x86_64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-ppc64le.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-ppc64le.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-loong64-glibc.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-loong64-glibc.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-darwin-amd64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-darwin-amd64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-windows-386.zip",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-windows-386.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_i386_pentium-mmx.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_i386_pentium-mmx.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "SFM-1.13.11.dSYMs.zip",
+        "LocalPath": "/files/sing-box/SFM-1.13.11.dSYMs.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips64el_mips64r2.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips64el_mips64r2.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_aarch64_cortex-a72.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_aarch64_cortex-a72.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_xscale.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_xscale.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_mips_4kec.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_mips_4kec.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-amd64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-amd64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a9.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a9.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-arm64.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-arm64.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-windows-arm64.zip",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-windows-arm64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_linux_mipsel.rpm",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_linux_mipsel.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_arm1176jzf-s_vfp.apk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_arm1176jzf-s_vfp.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box-1.13.11-linux-386.tar.gz",
+        "LocalPath": "/files/sing-box/sing-box-1.13.11-linux-386.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a7.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a7.ipk",
+        "Completed": true
+      },
+      {
+        "AssetName": "sing-box_1.13.11_openwrt_arm_cortex-a9_neon.ipk",
+        "LocalPath": "/files/sing-box/sing-box_1.13.11_openwrt_arm_cortex-a9_neon.ipk",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "mihomo-party-org/clash-party",
+    "TagName": "v1.9.4",
+    "Assets": [
+      {
+        "AssetName": "mihomo-party-macos-1.9.4-arm64.pkg.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-macos-1.9.4-arm64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-x64-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-x64-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-macos-1.9.4-x64.pkg.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-macos-1.9.4-x64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-macos-1.9.4-arm64.pkg",
+        "LocalPath": "/files/clash-party/mihomo-party-macos-1.9.4-arm64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-aarch64.rpm.sha256",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-aarch64.rpm.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-arm64.deb",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-arm64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-x64-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-x64-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-x64-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-x64-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-catalina-1.9.4-arm64.pkg.sha256",
+        "LocalPath": "/files/clash-party/clash-party-catalina-1.9.4-arm64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-x64-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-x64-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-ia32-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-ia32-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-arm64-setup.exe",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-arm64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-ia32-portable.7z",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-ia32-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-catalina-1.9.4-x64.pkg.sha256",
+        "LocalPath": "/files/clash-party/clash-party-catalina-1.9.4-x64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-aarch64.rpm",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-aarch64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-macos-1.9.4-x64.pkg",
+        "LocalPath": "/files/clash-party/clash-party-macos-1.9.4-x64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-arm64.deb.sha256",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-arm64.deb.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-macos-1.9.4-arm64.pkg.sha256",
+        "LocalPath": "/files/clash-party/clash-party-macos-1.9.4-arm64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-ia32-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-ia32-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-amd64.deb.sha256",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-amd64.deb.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-ia32-portable.7z",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-ia32-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-aarch64.rpm.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-aarch64.rpm.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-catalina-1.9.4-x64.pkg",
+        "LocalPath": "/files/clash-party/mihomo-party-catalina-1.9.4-x64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-x64-portable.7z",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-x64-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-x86_64.rpm.sha256",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-x86_64.rpm.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-x64-portable.7z",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-x64-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-catalina-1.9.4-arm64.pkg",
+        "LocalPath": "/files/clash-party/clash-party-catalina-1.9.4-arm64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-x64-portable.7z",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-x64-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-ia32-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-ia32-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-arm64-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-arm64-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-macos-1.9.4-arm64.pkg",
+        "LocalPath": "/files/clash-party/clash-party-macos-1.9.4-arm64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-ia32-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-ia32-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-arm64.deb.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-arm64.deb.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-ia32-portable.7z",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-ia32-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-macos-1.9.4-x64.pkg",
+        "LocalPath": "/files/clash-party/mihomo-party-macos-1.9.4-x64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-ia32-portable.7z",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-ia32-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-aarch64.rpm",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-aarch64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-ia32-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-ia32-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-x64-setup.exe",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-x64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-ia32-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-ia32-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-catalina-1.9.4-arm64.pkg.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-catalina-1.9.4-arm64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-x64-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-x64-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-x64-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-x64-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-x86_64.rpm",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-x86_64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-x86_64.rpm.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-x86_64.rpm.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-x64-setup.exe",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-x64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-win7-1.9.4-ia32-setup.exe",
+        "LocalPath": "/files/clash-party/clash-party-win7-1.9.4-ia32-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-amd64.deb",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-amd64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-arm64-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-arm64-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-arm64.deb",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-arm64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-catalina-1.9.4-x64.pkg",
+        "LocalPath": "/files/clash-party/clash-party-catalina-1.9.4-x64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-ia32-setup.exe",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-ia32-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-ia32-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-ia32-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-arm64-setup.exe",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-arm64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-x64-setup.exe",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-x64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-win7-1.9.4-ia32-setup.exe",
+        "LocalPath": "/files/clash-party/mihomo-party-win7-1.9.4-ia32-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-amd64.deb",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-amd64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-ia32-setup.exe",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-ia32-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-x64-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-x64-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-arm64-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-arm64-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-linux-1.9.4-amd64.deb.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-linux-1.9.4-amd64.deb.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-x64-portable.7z",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-x64-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-catalina-1.9.4-arm64.pkg",
+        "LocalPath": "/files/clash-party/mihomo-party-catalina-1.9.4-arm64.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-arm64-portable.7z",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-arm64-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "latest.yml",
+        "LocalPath": "/files/clash-party/latest.yml",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-catalina-1.9.4-x64.pkg.sha256",
+        "LocalPath": "/files/clash-party/mihomo-party-catalina-1.9.4-x64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-ia32-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-ia32-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-x64-setup.exe.sha256",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-x64-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-linux-1.9.4-x86_64.rpm",
+        "LocalPath": "/files/clash-party/clash-party-linux-1.9.4-x86_64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-macos-1.9.4-x64.pkg.sha256",
+        "LocalPath": "/files/clash-party/clash-party-macos-1.9.4-x64.pkg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-arm64-portable.7z.sha256",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-arm64-portable.7z.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "mihomo-party-windows-1.9.4-arm64-portable.7z",
+        "LocalPath": "/files/clash-party/mihomo-party-windows-1.9.4-arm64-portable.7z",
+        "Completed": true
+      },
+      {
+        "AssetName": "clash-party-windows-1.9.4-x64-setup.exe",
+        "LocalPath": "/files/clash-party/clash-party-windows-1.9.4-x64-setup.exe",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "hiddify/hiddify-app",
+    "TagName": "v4.1.1",
+    "Assets": [
+      {
+        "AssetName": "Hiddify-MacOS-Installer.pkg",
+        "LocalPath": "/files/hiddify-app/Hiddify-MacOS-Installer.pkg",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Android-arm64.apk",
+        "LocalPath": "/files/hiddify-app/Hiddify-Android-arm64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Android-arm7.apk",
+        "LocalPath": "/files/hiddify-app/Hiddify-Android-arm7.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Windows-Portable-x64.zip",
+        "LocalPath": "/files/hiddify-app/Hiddify-Windows-Portable-x64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Linux-x64-AppImage.tar.gz",
+        "LocalPath": "/files/hiddify-app/Hiddify-Linux-x64-AppImage.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Android-universal.apk",
+        "LocalPath": "/files/hiddify-app/Hiddify-Android-universal.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Windows-x64.msix",
+        "LocalPath": "/files/hiddify-app/Hiddify-Windows-x64.msix",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-MacOS.dmg",
+        "LocalPath": "/files/hiddify-app/Hiddify-MacOS.dmg",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Windows-Setup-x64.exe",
+        "LocalPath": "/files/hiddify-app/Hiddify-Windows-Setup-x64.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Linux-x64-AppImage.AppImage",
+        "LocalPath": "/files/hiddify-app/Hiddify-Linux-x64-AppImage.AppImage",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Debian-x64.deb",
+        "LocalPath": "/files/hiddify-app/Hiddify-Debian-x64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "Hiddify-Android-x86_64.apk",
+        "LocalPath": "/files/hiddify-app/Hiddify-Android-x86_64.apk",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "MetaCubeX/ClashMetaForAndroid",
+    "TagName": "v2.11.27",
+    "Assets": [
+      {
+        "AssetName": "cmfa-2.11.27-meta-x86-release.apk",
+        "LocalPath": "/files/ClashMetaForAndroid/cmfa-2.11.27-meta-x86-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "cmfa-2.11.27-meta-x86_64-release.apk",
+        "LocalPath": "/files/ClashMetaForAndroid/cmfa-2.11.27-meta-x86_64-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "output-metadata.json",
+        "LocalPath": "/files/ClashMetaForAndroid/output-metadata.json",
+        "Completed": true
+      },
+      {
+        "AssetName": "cmfa-2.11.27-meta-arm64-v8a-release.apk",
+        "LocalPath": "/files/ClashMetaForAndroid/cmfa-2.11.27-meta-arm64-v8a-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "cmfa-2.11.27-meta-armeabi-v7a-release.apk",
+        "LocalPath": "/files/ClashMetaForAndroid/cmfa-2.11.27-meta-armeabi-v7a-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "cmfa-2.11.27-meta-universal-release.apk",
+        "LocalPath": "/files/ClashMetaForAndroid/cmfa-2.11.27-meta-universal-release.apk",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "2dust/v2rayN",
+    "TagName": "7.20.4",
+    "Assets": [
+      {
+        "AssetName": "v2rayN-windows-64-desktop.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-windows-64-desktop.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-windows-arm64-desktop.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-windows-arm64-desktop.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-macos-arm64.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-macos-arm64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-linux-arm64.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-linux-arm64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-linux-rhel-riscv64.rpm",
+        "LocalPath": "/files/v2rayN/v2rayN-linux-rhel-riscv64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-macos-64.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-macos-64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-macos-arm64.dmg",
+        "LocalPath": "/files/v2rayN/v2rayN-macos-arm64.dmg",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-linux-arm64.deb",
+        "LocalPath": "/files/v2rayN/v2rayN-linux-arm64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-linux-64.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-linux-64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-windows-arm64.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-windows-arm64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-windows-64.zip",
+        "LocalPath": "/files/v2rayN/v2rayN-windows-64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-linux-rhel-64.rpm",
+        "LocalPath": "/files/v2rayN/v2rayN-linux-rhel-64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-linux-rhel-arm64.rpm",
+        "LocalPath": "/files/v2rayN/v2rayN-linux-rhel-arm64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-linux-64.deb",
+        "LocalPath": "/files/v2rayN/v2rayN-linux-64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayN-macos-64.dmg",
+        "LocalPath": "/files/v2rayN/v2rayN-macos-64.dmg",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "2dust/v2rayNG",
+    "TagName": "2.0.18",
+    "Assets": [
+      {
+        "AssetName": "v2rayNG_2.0.18_armeabi-v7a.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18_armeabi-v7a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18-fdroid_armeabi-v7a.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18-fdroid_armeabi-v7a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18-fdroid_arm64-v8a.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18-fdroid_arm64-v8a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18_universal.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18_universal.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18_x86.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18_x86.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18_arm64-v8a.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18_arm64-v8a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18-fdroid_x86.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18-fdroid_x86.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18-fdroid_universal.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18-fdroid_universal.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18_x86_64.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18_x86_64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "v2rayNG_2.0.18-fdroid_x86_64.apk",
+        "LocalPath": "/files/v2rayNG/v2rayNG_2.0.18-fdroid_x86_64.apk",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "getsurfboard/surfboard",
+    "TagName": "mobile-2.29.6",
+    "Assets": [
+      {
+        "AssetName": "mobile-armeabi-v7a-release.apk",
+        "LocalPath": "/files/surfboard/mobile-armeabi-v7a-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "mobile-universal-release.apk",
+        "LocalPath": "/files/surfboard/mobile-universal-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "mobile-x86-release.apk",
+        "LocalPath": "/files/surfboard/mobile-x86-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "mobile-x86_64-release.apk",
+        "LocalPath": "/files/surfboard/mobile-x86_64-release.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "mobile-arm64-v8a-release.apk",
+        "LocalPath": "/files/surfboard/mobile-arm64-v8a-release.apk",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "clash-verge-rev/clash-verge-rev",
+    "TagName": "v2.4.7",
+    "Assets": [
+      {
+        "AssetName": "Clash.Verge-2.4.7-1.armhfp.rpm",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge-2.4.7-1.armhfp.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_x64_fixed_webview2-setup.exe",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_x64_fixed_webview2-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_x64.app.tar.gz",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_x64.app.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_arm64-setup.exe.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_arm64-setup.exe.sig",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge-2.4.7-1.aarch64.rpm",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge-2.4.7-1.aarch64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_x64-setup.exe",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_x64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge-2.4.7-1.x86_64.rpm",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge-2.4.7-1.x86_64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_arm64.deb",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_arm64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_amd64.deb.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_amd64.deb.sig",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_armhf.deb",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_armhf.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_aarch64.app.tar.gz",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_aarch64.app.tar.gz",
+        "Completed": true
+      },
+      {
+        "AssetName": "latest.json",
+        "LocalPath": "/files/clash-verge-rev/latest.json",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_x64.app.tar.gz.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_x64.app.tar.gz.sig",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_arm64_fixed_webview2-setup.exe",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_arm64_fixed_webview2-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_aarch64.app.tar.gz.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_aarch64.app.tar.gz.sig",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_x64.dmg",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_x64.dmg",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_amd64.deb",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_amd64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge-2.4.7-1.x86_64.rpm.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge-2.4.7-1.x86_64.rpm.sig",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_x64-setup.exe.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_x64-setup.exe.sig",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_aarch64.dmg",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_aarch64.dmg",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_arm64-setup.exe",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_arm64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_x64_fixed_webview2-setup.exe.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_x64_fixed_webview2-setup.exe.sig",
+        "Completed": true
+      },
+      {
+        "AssetName": "Clash.Verge_2.4.7_arm64_fixed_webview2-setup.exe.sig",
+        "LocalPath": "/files/clash-verge-rev/Clash.Verge_2.4.7_arm64_fixed_webview2-setup.exe.sig",
+        "Completed": true
+      }
+    ]
+  },
+  {
+    "RepoName": "chen08209/FlClash",
+    "TagName": "v0.8.92",
+    "Assets": [
+      {
+        "AssetName": "FlClash-0.8.92-windows-amd64.zip.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-windows-amd64.zip.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-android-x86_64.apk.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-android-x86_64.apk.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-windows-amd64-setup.exe.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-windows-amd64-setup.exe.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-amd64.rpm",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-amd64.rpm",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-amd64.AppImage",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-amd64.AppImage",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-macos-arm64.dmg",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-macos-arm64.dmg",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-android-arm64-v8a.apk.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-android-arm64-v8a.apk.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-macos-amd64.dmg.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-macos-amd64.dmg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-amd64.deb.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-amd64.deb.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-arm64.deb",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-arm64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-macos-amd64.dmg",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-macos-amd64.dmg",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-android-armeabi-v7a.apk",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-android-armeabi-v7a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-windows-amd64-setup.exe",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-windows-amd64-setup.exe",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-android-armeabi-v7a.apk.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-android-armeabi-v7a.apk.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-android-arm64-v8a.apk",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-android-arm64-v8a.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-macos-arm64.dmg.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-macos-arm64.dmg.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-amd64.AppImage.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-amd64.AppImage.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-arm64.deb.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-arm64.deb.sha256",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-windows-amd64.zip",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-windows-amd64.zip",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-amd64.deb",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-amd64.deb",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-android-x86_64.apk",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-android-x86_64.apk",
+        "Completed": true
+      },
+      {
+        "AssetName": "FlClash-0.8.92-linux-amd64.rpm.sha256",
+        "LocalPath": "/files/FlClash/FlClash-0.8.92-linux-amd64.rpm.sha256",
+        "Completed": true
+      }
+    ]
+  }
+]

@@ -5,35 +5,51 @@
 // ============================================================
 
 /**
+ * Tokenise a filename on the separators used by release-asset naming
+ * conventions: `-`, `_`, `.`, `/`, and whitespace.
+ *
+ * Why: `\b` word boundaries don't work here — the underscore is a
+ * regex "word character", so `\bopenwrt\b` misses `_openwrt_` and
+ * sing-box's `*_openwrt_*.apk` Alpine packages get misclassified as
+ * Android by the `.apk` fallback. Splitting explicitly on separators
+ * and comparing tokens avoids that whole class of bug.
+ */
+function tokenize(name) {
+  return name.toLowerCase().split(/[-_.\/\s]+/).filter(Boolean);
+}
+
+/**
  * Detect the operating system from a release asset filename.
  * Rules cover all repos in repos.json (sing-box, clash-party,
  * hiddify, CMFA, v2rayN/NG, surfboard, clash-verge-rev, FlClash).
+ *
+ * Strategy: explicit OS tokens win over extension fallbacks. This
+ * disambiguates `.apk` (Android APK vs Alpine Linux/OpenWrt package)
+ * and `.exe` (generic Windows vs win7 variant).
  */
 function detectOS(name) {
   const n = name.toLowerCase();
+  const tokens = tokenize(name);
+  const has = t => tokens.includes(t);
 
-  // OpenWrt first — it is "linux" too but more specific
-  if (/\bopenwrt\b/.test(n)) return 'openwrt';
+  // Priority 1: explicit OS tokens (most specific first)
+  if (has('openwrt'))                                return 'openwrt';
+  if (has('android'))                                return 'android';
+  if (has('windows') || has('win') || has('win7'))   return 'windows';
+  if (has('darwin') || has('macos') || has('catalina')
+      || has('apple') || has('intel')
+      || /\.app\.tar\.gz(\.sig)?$/.test(n))          return 'macos';
+  if (has('linux') || has('debian'))                 return 'linux';
 
-  // Android — check before Linux
-  if (/\bandroid\b/.test(n)) return 'android';
-
-  // Windows — win7 is a variant, not a separate OS
-  if (/\bwindows\b|[-_]win7[-_]/.test(n)) return 'windows';
-
-  // macOS — darwin (Go cross-compile name), catalina (macOS 10.15 variant in clash-party), apple (SFM-*-Apple.pkg)
-  if (/\bdarwin\b|\bmacos\b|\bcatalina\b|\bapple\b/.test(n)) return 'macos';
-
-  // Linux
-  if (/\blinux\b|\bdebian\b/.test(n)) return 'linux';
-
-  // Extension-based fallbacks for ambiguous names
-  if (/\.apk$/i.test(name))                        return 'android';
-  if (/\.(exe|msix)$/i.test(name))                 return 'windows';
-  if (/\.(dmg|pkg)$/i.test(name))                  return 'macos';
-  if (/dsyms/i.test(name))                         return 'macos'; // Apple dSYMs debug symbols
-  if (/\.ipk$/i.test(name))                        return 'openwrt';
-  if (/\.(deb|rpm|appimage)$/i.test(name))         return 'linux';
+  // Priority 2: extension fallbacks (for names with no OS token,
+  // e.g. SFA-1.13.11-x86_64.apk, cmfa-*-arm64-v8a-release.apk)
+  if (n.endsWith('.ipk'))                            return 'openwrt';
+  if (n.endsWith('.apk'))                            return 'android';
+  if (n.endsWith('.exe') || n.endsWith('.msix'))     return 'windows';
+  if (n.endsWith('.dmg') || n.endsWith('.pkg')
+      || /dsyms/.test(n))                            return 'macos';
+  if (n.endsWith('.deb') || n.endsWith('.rpm')
+      || n.endsWith('.appimage'))                    return 'linux';
 
   return 'other';
 }
@@ -43,38 +59,44 @@ function detectOS(name) {
  *
  * Priority: universal > arm64 > armv7 > x64 > x86 > other
  *
- * Key design decisions:
- *  - arm64 is checked BEFORE generic "64" patterns so "arm64" is never
- *    misclassified as x64.
- *  - Standalone "-64" (v2rayN-macos-64.dmg) is detected as x64.
- *  - OpenWrt files with exotic cortex/MIPS variants fall into 'other'
- *    and are shown whenever OS=openwrt regardless of arch filter.
+ * Uses the same token-based approach as detectOS so names like
+ * `sing-box_1.13.11_linux_x86_64.apk` (tokens: x86, 64) or
+ * `v2rayN-macos-64.dmg` (standalone 64) resolve correctly without
+ * fighting word-boundary rules.
  */
 function detectArch(name) {
-  const n = name.toLowerCase();
+  const tokens = tokenize(name);
+  const has = t => tokens.includes(t);
 
   // Universal build (works on any arch)
-  if (/\buniversal\b/.test(n)) return 'universal';
+  if (has('universal')) return 'universal';
 
-  // ARM 64-bit: aarch64, arm64 (and compound forms like arm64-v8a)
-  if (/aarch64|arm64/.test(n)) return 'arm64';
+  // ARM 64-bit: aarch64, arm64 (compound "arm64-v8a" splits to 'arm64' + 'v8a')
+  if (has('aarch64') || has('arm64')) return 'arm64';
 
-  // ARM 32-bit / ARMv7
-  // armeabi-v7a, armv7, armhf/armhfp (rpm), arm7 (Hiddify naming), armv7hl (rpm)
-  if (/armeabi-v7a|armv7|armhf|arm7\b|armv7hl/.test(n)) return 'armv7';
+  // ARM 32-bit / ARMv7 family
+  // armv7, armv7a, armv7hl, armhf, armhfp, arm7 (Hiddify), armeabi (split from armeabi-v7a),
+  // armel/armv6/armv6hl — 32-bit soft-float variants grouped here as the closest match
+  if (has('armv7') || has('armv7a') || has('armv7hl')
+      || has('armhf') || has('armhfp')
+      || has('arm7') || has('armeabi')
+      || has('armel') || has('armv6') || has('armv6hl')) return 'armv7';
 
   // x86-64 / AMD64
-  // x86_64, x86-64, amd64, \bx64\b as a whole word
-  if (/x86[_-]64|amd64|\bx64\b/.test(n)) return 'x64';
+  // amd64, x64, or the split "x86_64"/"x86-64" which tokenises to ['x86', '64']
+  if (has('amd64') || has('x64')) return 'x64';
+  if (has('x86') && has('64')) return 'x64';
 
-  // Standalone "-64" / "_64" / ".64" pattern used by some repos (v2rayN, hiddify)
-  // The regex requires a separator before 64 so it cannot fire on "arm64".
-  if (/[-_.]64(?=[-_.]|$)/.test(n) && !/arm64/.test(n)) return 'x64';
+  // Standalone "-64" / "_64" / ".64" (v2rayN-linux-64.zip, v2rayN-macos-64.dmg)
+  // Safe because arm64/aarch64 were already handled above.
+  if (has('64')) return 'x64';
 
-  // x86 / 32-bit Intel: x86 (but not x86_64), i386, 386, ia32, pentium
-  if (/\bx86\b(?![_-]64)|\bi386\b|\b386\b|\bia32\b|\bpentium\b/.test(n)) return 'x86';
+  // x86 / 32-bit Intel
+  if (has('x86') || has('i386') || has('386')
+      || has('ia32') || has('pentium') || has('pentium4')) return 'x86';
 
-  // Everything else (MIPS, RISC-V, LoongArch, PowerPC, s390x, OpenWrt cortex variants…)
+  // Everything else (MIPS, RISC-V, LoongArch, PowerPC, s390x, armv5,
+  // OpenWrt cortex/xscale/fa526 variants…)
   return 'other';
 }
 
