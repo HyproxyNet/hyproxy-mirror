@@ -534,6 +534,8 @@ body.dark-mode .asset-item:hover { background: rgba(255, 255, 255, 0.04); }
 }
 
 .repo-card-wrapper {
+  /* Bootstrap row 默认 stretch 同一行的列；避免一个展开时其余卡片被拉高。 */
+  align-self: flex-start;
   animation: fadeSlideIn 0.35s ease both;
 }
 

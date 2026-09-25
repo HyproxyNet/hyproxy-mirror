@@ -6,7 +6,6 @@ import (
 	"html/template"
 	"net/http"
 	"os"
-	"path/filepath"
 	"time"
 
 	"github.com/fsnotify/fsnotify"
@@ -18,7 +17,6 @@ import (
 	"hyproxy-mirror/internal/syncer"
 )
 
-// 仅初始化模板
 var tpl *template.Template
 
 func init() {
@@ -34,7 +32,6 @@ func main() {
 	addr := flag.String("addr", ":8080", "HTTP 监听地址")
 	flag.Parse()
 
-	// 首次加载配置并设置日志级别
 	if err := config.Load(*cfgPath); err != nil {
 		logx.Errorf("加载配置失败: %v", err)
 		os.Exit(1)
@@ -42,32 +39,27 @@ func main() {
 	logx.SetLevelFromString(config.GetLogLevel())
 	logx.Infof("启动，日志等级: %s", config.GetLogLevel())
 
-	// 基目录
-	base := config.Cfg.Global.BaseDir
-	if err := os.MkdirAll(base, 0o755); err != nil {
+	baseDir := config.Cfg.Global.BaseDir
+	if err := os.MkdirAll(baseDir, 0o755); err != nil {
 		logx.Errorf("创建基目录失败: %v", err)
 		os.Exit(1)
 	}
+	localStore := storage.NewLocal(baseDir, config.GetCacheMaxBytes())
 
-	localStore := storage.NewLocal(base)
-
-	// 状态文件
 	if err := syncer.LoadState("state.json"); err != nil {
 		logx.Warnf("加载状态文件失败，将在首次同步后创建: %v", err)
 	}
 
-	// 调度上下文
 	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
 	go syncer.RunScheduler(ctx, localStore)
 
-	// 配置热更新（去抖 500ms）
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
 		logx.Errorf("创建文件监控失败: %v", err)
 		os.Exit(1)
 	}
 	defer watcher.Close()
-
 	if err := watcher.Add(*cfgPath); err != nil {
 		logx.Errorf("监控配置文件失败: %v", err)
 		os.Exit(1)
@@ -78,18 +70,15 @@ func main() {
 			debounce *time.Timer
 			pending  bool
 		)
-
 		restart := func() {
-			// 先加载新配置
 			if err := config.Load(*cfgPath); err != nil {
 				logx.Warnf("重新加载配置失败: %v", err)
 				return
 			}
-			// 更新日志等级
 			logx.SetLevelFromString(config.GetLogLevel())
-			logx.Infof("配置已重载，新的周期: %s，日志等级: %s", config.GetInterval(), config.GetLogLevel())
+			localStore.SetMaxBytes(config.GetCacheMaxBytes())
+			logx.Infof("配置已重载，新的周期: %s，日志等级: %s，缓存上限: %s", config.GetInterval(), config.GetLogLevel(), config.Cfg.Global.CacheMaxSize)
 
-			// 重启调度
 			cancel()
 			ctx, cancel = context.WithCancel(context.Background())
 			go syncer.RunScheduler(ctx, localStore)
@@ -110,14 +99,9 @@ func main() {
 		}
 	}()
 
-	// 静态资源（CSS / JS）
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-
-	// 已下载的 Release 文件
-	http.Handle("/files/", http.StripPrefix("/files/", http.FileServer(http.Dir(filepath.Clean(base)))))
+	http.Handle("/files/", http.StripPrefix("/files/", syncer.ServeAsset(localStore)))
 	http.HandleFunc("/api/repos", api.Handler)
-
-	// 首页模板渲染
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		data := syncer.GetStatus()
 		if err := tpl.ExecuteTemplate(w, "index.html", data); err != nil {

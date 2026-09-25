@@ -1,19 +1,18 @@
-# Install Dependencies
+# Hyproxy 下载镜像站
 
-```
-go mod tidy
-```
+## 运行
 
-# Run
-
-```
-# Default port is 8080
+```bash
+# 默认监听 8080
 go run main.go
 
-# Custom port
-go run main.go -addr :8081
-
-# Bind IP
+# 自定义监听地址
 go run main.go -addr 127.0.0.1:8081
 ```
 
+## 缓存策略
+
+- 同步任务只拉取 GitHub Release 元数据，不再预先下载全部文件。
+- 用户点击文件时，服务会将上游下载流式转发到客户端，并在传输完成后原子写入本地缓存；上游或客户端中断时不会留下可被命中的半成品缓存。
+- `global.cache_max_size` 控制缓存最大占用，默认 `20GB`，支持 `B`、`KB`、`MB`、`GB`、`TB`（例如 `5GB`）。空间不足时按文件最后修改时间清理最旧缓存；单个大于上限或上游未提供文件大小的文件仍会正常流式代理，但不会缓存。
+- 检测到 Release tag 更新后，会删除该仓库此前版本的缓存。多个用户同时请求同一未缓存文件时，只会发起一次上游拉取，后续请求会等待并复用完成的缓存。

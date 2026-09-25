@@ -2,6 +2,7 @@ global:
   base_dir: data
   interval: 1h
   log_level: info # 支持: debug, info, warn, error
+  cache_max_size: 20GB # 本地缓存上限；支持 B、KB、MB、GB、TB
 
 repositories:
   - owner: SagerNet

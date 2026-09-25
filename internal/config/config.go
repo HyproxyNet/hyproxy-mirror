@@ -2,7 +2,9 @@ package config
 
 import (
 	"errors"
+	"fmt"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 
@@ -14,7 +16,9 @@ type GlobalConfig struct {
 	BaseDir          string `yaml:"base_dir"`
 	Interval         string `yaml:"interval"`
 	LogLevel         string `yaml:"log_level"`
+	CacheMaxSize     string `yaml:"cache_max_size"`
 	intervalDuration time.Duration
+	cacheMaxBytes    int64
 }
 
 // RepoConfig：单个仓库配置
@@ -31,6 +35,32 @@ type Config struct {
 }
 
 var Cfg Config
+
+const defaultCacheMaxSize = "20GB"
+
+func parseByteSize(value string) (int64, error) {
+	value = strings.TrimSpace(strings.ToUpper(value))
+	for _, suffix := range []struct {
+		name       string
+		multiplier int64
+	}{
+		{"TB", 1 << 40},
+		{"GB", 1 << 30},
+		{"MB", 1 << 20},
+		{"KB", 1 << 10},
+		{"B", 1},
+	} {
+		if strings.HasSuffix(value, suffix.name) {
+			number := strings.TrimSpace(strings.TrimSuffix(value, suffix.name))
+			amount, err := strconv.ParseInt(number, 10, 64)
+			if err != nil || amount <= 0 || amount > (1<<63-1)/suffix.multiplier {
+				return 0, fmt.Errorf("invalid size %q", value)
+			}
+			return amount * suffix.multiplier, nil
+		}
+	}
+	return 0, fmt.Errorf("invalid size %q (use B, KB, MB, GB, or TB)", value)
+}
 
 // Load 读取并解析 YAML，填充默认值与基本校验
 func Load(path string) error {
@@ -51,6 +81,15 @@ func Load(path string) error {
 	if Cfg.Global.LogLevel == "" {
 		Cfg.Global.LogLevel = "info"
 	}
+	if Cfg.Global.CacheMaxSize == "" {
+		Cfg.Global.CacheMaxSize = defaultCacheMaxSize
+	}
+
+	cacheMaxBytes, err := parseByteSize(Cfg.Global.CacheMaxSize)
+	if err != nil {
+		return fmt.Errorf("invalid global.cache_max_size: %w", err)
+	}
+	Cfg.Global.cacheMaxBytes = cacheMaxBytes
 
 	d, err := time.ParseDuration(Cfg.Global.Interval)
 	if err != nil || d <= 0 {
@@ -78,4 +117,9 @@ func GetInterval() time.Duration {
 // GetLogLevel 返回标准化日志级别字符串
 func GetLogLevel() string {
 	return strings.ToLower(Cfg.Global.LogLevel)
+}
+
+// GetCacheMaxBytes 返回本地缓存允许占用的最大空间。
+func GetCacheMaxBytes() int64 {
+	return Cfg.Global.cacheMaxBytes
 }
